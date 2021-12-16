@@ -7,9 +7,9 @@ void heapify(vector<int>& heap, int n, int i){
     int left = 2*i + 1;
     int right = 2*i + 2;
 
-    if (left < n && heap[largest] < heap[left])
+    if (left <= n && heap[largest] < heap[left])
         largest = left;
-    if (right < n && heap[largest] < heap[right])
+    if (right <= n && heap[largest] < heap[right])
         largest = right;
     
     if(largest != i){
